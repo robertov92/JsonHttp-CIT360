@@ -26,7 +26,7 @@ public class HttpServerExample {
 
         try{
             URL url = new URL("http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial" +
-                    "&APPID=************* My Weather Map API ****************");
+                    "&APPID=************* My openweathermap API ****************");
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
             while ((line = reader.readLine()) != null) responseContent.append(line);
